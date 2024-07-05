@@ -4,7 +4,8 @@ import 'package:week_six/screens/screen_four.dart';
 import 'package:week_six/screens/screen_one.dart';
 import 'package:week_six/screens/screen_six.dart';
 import 'package:week_six/screens/screen_three.dart';
-import 'package:week_six/screens/screen_two.dart';
+// import 'package:week_six/screens/screen_two.dart';
+import 'package:week_six/screens/screen_two1.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -55,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ScreenTwo())),
+                            builder: (context) => const ScreenTwo1())),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
                     ),

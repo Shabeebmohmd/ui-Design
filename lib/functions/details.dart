@@ -1,5 +1,43 @@
+import 'package:flutter/material.dart';
+
 class Details {
-  final List<String> images = [
+  // screen two
+  List<IconData> icons = [
+    Icons.campaign,
+    Icons.currency_rupee,
+    Icons.discount,
+    Icons.person,
+    Icons.qr_code_sharp,
+    Icons.currency_rupee,
+    Icons.notes_rounded,
+  ];
+
+  List<Color> colors = [
+    Colors.amber[900]!,
+    Colors.green,
+    Colors.amber[400]!,
+    Colors.teal[300]!,
+    Colors.grey,
+    const Color.fromARGB(255, 132, 51, 230),
+    const Color.fromARGB(
+      255,
+      187,
+      19,
+      151,
+    ),
+  ];
+
+  List<String> text = [
+    'Marketing\nDesigns',
+    'Online\nPayments',
+    'Discount\nCoupons',
+    'My\nCustomers',
+    'Store QR\nCode',
+    'Extra\nCharges',
+    'Order\nForm',
+  ];
+  // screen three
+  List<String> images = [
     'assets/images/img-1.jpg',
     'assets/images/img-2.jpg',
     'assets/images/img-3.jpg',
