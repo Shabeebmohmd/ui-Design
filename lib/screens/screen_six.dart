@@ -70,11 +70,14 @@ class _ScreenSixState extends State<ScreenSix> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset(
-                      obj.product_images[index],
-                      width: 80,
-                      height: 80,
-                      fit: BoxFit.fill,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        obj.product_images[index],
+                        width: 80,
+                        height: 80,
+                        fit: BoxFit.fill,
+                      ),
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

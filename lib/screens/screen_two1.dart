@@ -9,6 +9,7 @@ class ScreenTwo1 extends StatefulWidget {
 }
 
 class _ScreenTwo1State extends State<ScreenTwo1> {
+  int _position = 0;
   Details obj = Details();
 
   @override
@@ -110,41 +111,46 @@ class _ScreenTwo1State extends State<ScreenTwo1> {
                       BottomNavigationBarItem(
                         icon: Icon(
                           Icons.home,
-                          color: Colors.grey,
+                          // color: Colors.grey,
                         ),
                         label: 'Home',
                       ),
                       BottomNavigationBarItem(
                         icon: Icon(
                           Icons.shopping_bag_outlined,
-                          color: Colors.grey,
+                          // color: Colors.grey,
                         ),
                         label: 'Orders',
                       ),
                       BottomNavigationBarItem(
                         icon: Icon(
                           Icons.grid_view_outlined,
-                          color: Colors.grey,
+                          // color: Colors.grey,
                         ),
                         label: 'Products',
                       ),
                       BottomNavigationBarItem(
                         icon: Icon(
                           Icons.manage_search_rounded,
-                          color: Colors.blue,
+                          // color: Colors.blue,
                         ),
                         label: 'Manage',
                       ),
                       BottomNavigationBarItem(
                         icon: Icon(
                           Icons.person_2_outlined,
-                          color: Colors.grey,
+                          // color: Colors.grey,
                         ),
                         label: 'Account',
                       ),
                     ],
-                    currentIndex: 3,
+                    currentIndex: _position,
                     selectedItemColor: Colors.blue,
+                    onTap: (value) {
+                      setState(() {
+                        _position = value;
+                      });
+                    },
                   ),
                 ),
               ],
