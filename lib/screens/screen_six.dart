@@ -9,7 +9,7 @@ class ScreenSix extends StatefulWidget {
 }
 
 class _ScreenSixState extends State<ScreenSix> {
-  bool on = false;
+  bool on = true;
   Details obj = Details();
 
   @override
@@ -49,7 +49,7 @@ class _ScreenSixState extends State<ScreenSix> {
         ),
         body: TabBarView(
           children: [
-            products(), // Add the products list here
+            products(),
             const Center(child: Text('Categories Tab')),
           ],
         ),
@@ -70,14 +70,21 @@ class _ScreenSixState extends State<ScreenSix> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        obj.product_images[index],
-                        width: 80,
-                        height: 80,
-                        fit: BoxFit.fill,
-                      ),
+                    Column(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            obj.product_images[index],
+                            width: 80,
+                            height: 80,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 15,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,23 +105,29 @@ class _ScreenSixState extends State<ScreenSix> {
                         )
                       ],
                     ),
-                    if (index >= 2) const SizedBox(width: 7),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.more_vert),
-                        ),
-                        Switch(
-                            activeColor: Colors.blue,
-                            value: on,
-                            onChanged: (value) {
-                              setState(() {
-                                on = value;
-                              });
-                            })
-                      ],
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.more_vert),
+                              ),
+                              Switch(
+                                  activeColor: Colors.blue,
+                                  value: on,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      on = value;
+                                    });
+                                  })
+                            ],
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),

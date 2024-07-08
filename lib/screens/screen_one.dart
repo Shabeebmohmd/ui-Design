@@ -8,7 +8,7 @@ class ScreenOne extends StatefulWidget {
 }
 
 class _ScreenOneState extends State<ScreenOne> {
-  bool on = false;
+  bool on = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

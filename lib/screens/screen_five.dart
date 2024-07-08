@@ -302,6 +302,7 @@ class ScreenFive extends StatelessWidget {
               const Row(
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'State',
@@ -316,6 +317,7 @@ class ScreenFive extends StatelessWidget {
               const Row(
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Email',
